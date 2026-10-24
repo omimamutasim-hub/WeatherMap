@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherMap</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+    >
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+    defer
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+     <h1>WeatherMap</h1>
+    </header>
+
+<main>
+  <p>Search for a place to see its weather on the map.</p>
+  <form id="search-form" role="search">
+  <label for="location">Enter a city or place</label>
+  <input
+    type="search"
+    id="location"
+    name="location"
+    placeholder="For example, Khartoum"
+    required
+  >
+  <button type="submit">Search</button>
+</form>
+<div id="loading" role="status" aria-live="polite" hidden>
+  <span id="status">Searching for location…</span>
+  <span class="spinner" aria-hidden="true"></span>
+</div>
+ 
+</section>
+<section aria-labelledby="map-heading">
+  <h2 id="map-heading">Weather map</h2>
+  <div id="map" role="region" aria-label="Interactive weather map"></div>
+</section>
+</main>
+
+  </body>
+</html>
