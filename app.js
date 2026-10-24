@@ -87,7 +87,7 @@ marker = L.marker([latitude, longitude])
 weatherUrl.search = new URLSearchParams({
   lat: latitude,
   lon: longitude,
-  appid: '02df414424b6d74ff023d806adadd277',
+  appid: '3a3867b4bbffa08fd3c181d1e3634244',
   units: 'metric'
 });
 
